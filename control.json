@@ -1,0 +1,119 @@
+{
+  "webpack": "5.112.2",
+  "node": "v22.23.4",
+  "control": true,
+  "update": {
+    "before": "2995e20822a33b2086bf",
+    "after": "10a6f6bf276579f462aa",
+    "updated": [
+      "./dep.js",
+      "./page.js"
+    ],
+    "status": "idle"
+  },
+  "actual": 2,
+  "expected": 2,
+  "builds": [
+    {
+      "label": "initial",
+      "hash": "2995e20822a33b2086bf",
+      "entries": {
+        "main": [
+          "main.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./bridge.js",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "page",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./page.js"
+          ]
+        }
+      ],
+      "manifests": {}
+    },
+    {
+      "label": "change only target dependency list",
+      "hash": "10a6f6bf276579f462aa",
+      "entries": {
+        "main": [
+          "main.js",
+          "main.2995e20822a33b2086bf.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./bridge.js",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "page",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js",
+            "./page.js"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.2995e20822a33b2086bf.hot-update.json": {
+          "c": [
+            "main",
+            "page"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main",
+              "page"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

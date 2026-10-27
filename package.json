@@ -1,0 +1,16 @@
+{
+  "name": "webpack-hmr-chunk-topology-propagation-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Changing an async chunk list invalidates an unchanged import caller",
+  "scripts": {
+    "test": "node reproduce.cjs",
+    "test:control": "node reproduce.cjs --control"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "webpack": "5.112.2"
+  }
+}

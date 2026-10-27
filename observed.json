@@ -1,0 +1,123 @@
+{
+  "webpack": "5.112.2",
+  "node": "v22.23.4",
+  "control": false,
+  "update": {
+    "before": "2995e20822a33b2086bf",
+    "error": "Aborted because ./bridge.js is not accepted\nUpdate propagation: ./bridge.js -> ./index.js",
+    "status": "abort"
+  },
+  "actual": 1,
+  "expected": 2,
+  "builds": [
+    {
+      "label": "initial",
+      "hash": "2995e20822a33b2086bf",
+      "entries": {
+        "main": [
+          "main.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./bridge.js",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "page",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./page.js"
+          ]
+        }
+      ],
+      "manifests": {}
+    },
+    {
+      "label": "change only target dependency list",
+      "hash": "dd7764f1800f21992310",
+      "entries": {
+        "main": [
+          "main.js",
+          "main.2995e20822a33b2086bf.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./bridge.js",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "page",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./page.js"
+          ]
+        },
+        {
+          "id": "shared",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.2995e20822a33b2086bf.hot-update.json": {
+          "c": [
+            "main",
+            "page"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main",
+              "page"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
